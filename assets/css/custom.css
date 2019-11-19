@@ -1,0 +1,449 @@
+
+
+/* Checkbox switch */
+
+.checkbox-switch {
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    width: 80px;
+    height: 30px;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+    line-height: 1.2;
+    font-size: 14px;
+}
+
+.checkbox-switch input.input-checkbox {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 80px;
+	height: 30px;
+	padding: 0;
+	margin: 0;
+	opacity: 0;
+	z-index: 2;
+	cursor: pointer;
+}
+
+.checkbox-switch .checkbox-animate {
+    position: relative;
+    width: 80px;
+    height: 30px;
+    background-color: #95a5a6;
+    -webkit-transition: background 0.25s ease-out 0s;
+    transition: background 0.25s ease-out 0s;
+}
+
+.checkbox-switch .checkbox-animate:before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	background-color: #7f8c8d;
+	top: 5px;
+	left: 5px;
+	 -webkit-transition: left 0.3s ease-out 0s;
+    transition: left 0.3s ease-out 0s;
+    z-index: 10;
+}
+
+.checkbox-switch input.input-checkbox:checked + .checkbox-animate {
+	background-color: #2ecc71;
+}
+
+.checkbox-switch input.input-checkbox:checked + .checkbox-animate:before {
+	left: 55px;
+	background-color: #27ae60;
+}
+
+.checkbox-switch .checkbox-off,
+.checkbox-switch .checkbox-on {
+	float: left;
+	color: #fff;
+	font-weight: 700;
+	padding-top: 6px;
+	 -webkit-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+.checkbox-switch .checkbox-off {
+	margin-left: 30px;
+	opacity: 1;
+}
+
+.checkbox-switch .checkbox-on {
+	display: none;
+	float: right;
+	margin-right: 35px;
+	opacity: 0;
+}
+
+.checkbox-switch input.input-checkbox:checked + .checkbox-animate .checkbox-off {
+	display: none;
+	opacity: 0;
+}
+
+.checkbox-switch input.input-checkbox:checked + .checkbox-animate .checkbox-on {
+	display: block;
+	opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.steemwp-section {
+    text-align: center;
+    display: block;
+    margin: 0rem 0rem 4rem 0rem;
+}
+
+a.steemwp-tile {
+    text-align: center;
+    margin: 0 10px 10px 0;
+    padding: 1rem;
+    width: 140px;
+    height: 140px;
+    text-decoration: none;
+    transition: box-shadow 0.2s linear, transform 0.2s linear;
+    box-shadow: 1px 1px 5px 1px rgba(222, 222, 222, 0.2);
+    margin: 22px 23px;
+    background: white;
+    display: inline-block;
+    vertical-align: top;
+    width: 180px;
+    height: 168px;
+    font-size: 14.5px;
+    border-radius: 8px;
+    position: relative;
+}
+
+a.steemwp-tile:hover {
+    top: -5px;
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+a > .dashicons {
+    display: block;
+    margin: auto;
+    font-size: 60px;
+    text-align: center;
+    width: 100%;
+    height: 40%;
+}
+
+a > .header {
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    margin: 1rem;
+}
+
+a > .footer {
+    display:block;
+}
+
+
+.steemwp-card {
+  margin: 4rem;
+  border: 1px solid #fafafa;
+  border-radius: 4px;
+  padding: 2rem;
+  max-width: 100%;
+  box-shadow: 0px 1px 22px -12px #607D8B;
+  width: 12rem;
+}
+
+.no-border {
+  border: 0px !important;
+}
+
+.steemwp-card.fluid {
+  max-width: 100%;
+}
+
+.steemwp-card * {
+  text-align: center;
+  word-wrap: break-word;
+  display: block;
+}
+.steemwp-card > {
+  text-align: center;
+  display: block;
+  /*
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  */
+}
+.steemwp-card .header {
+  padding-top: 0.4rem;
+  padding-bottom: 0.5rem;
+  font-size: 300%;
+}
+
+.steemwp-card.basic {
+  height: 7rem;
+}
+.steemwp-card .footer {
+  margin-top: 1.5rem;
+  font-size: 95%;
+}
+
+#chart, .chart-box {
+  padding-top: 20px;
+  padding-left: 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 22px 35px -16px rgba(0,0,0, 0.1);
+}
+
+.steemwp-social {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-weight:bold;
+}
+
+.steemwp-rowed {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Shared
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button {
+  border-radius: 100px;
+}
+
+/* Sections
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.section {
+  padding: 8rem 0 7rem;
+  text-align: center;
+}
+.section-heading,
+.section-description {
+  margin-bottom: 1.2rem;
+}
+
+/* Hero
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.phones {
+  position: relative;
+}
+.phone {
+  position: relative;
+  max-width: 80%;
+  margin: 3rem auto -12rem;
+}
+.phone + .phone {
+  display: none;
+}
+
+/* Values
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.values {
+  background-image: url('../images/values-bg.jpg');
+  background-size: cover;
+  color: #fff;
+  padding-bottom: 5rem;
+}
+.value-multiplier {
+  margin-bottom: .5rem;
+  color: #11DFC7;
+}
+.value-heading {
+  margin-bottom: .3rem;
+}
+.value-description {
+  opacity: .8;
+  font-weight: 300;
+}
+
+/* Help
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.get-help {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Categories
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.categories {
+  background-image: url('../images/values-bg.jpg');
+  background-size: cover;
+  color: #fff;
+}
+.categories .section-description { 
+  margin-bottom: 4rem;
+}
+
+/* Bigger than 550 */
+@media (min-width: 550px) {
+  .section {
+    padding: 12rem 0 11rem;
+  }
+  .hero {
+    padding-bottom: 12rem;
+    text-align: left;
+    height: 165px;
+  }
+  .phone {
+    position: absolute;
+    top: -7rem;
+    right: 3rem;
+    max-height: 362px;
+    z-index: 3;
+  }
+  .phone + .phone {
+    top: -6rem;
+    display: block;
+    max-width: 73.8%;
+    right: 0;
+    z-index: 2;
+    max-height: 338px;
+  }
+  .hero-heading {
+    font-size: 2.4rem;
+  }
+}
+
+/* Bigger than 750 */
+@media (min-width: 750px) {
+  .hero {
+    height: 190px;
+  }
+  .hero-heading {
+    font-size: 2.6rem;
+  }
+  .section {
+    padding: 14rem 0 15rem;
+  }
+  .hero {
+    padding: 16rem 0 14rem;
+  }
+  .section-description {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .phone {
+    top: -14rem;
+    right: 5rem;
+    max-height: 510px;
+  }
+  .phone + .phone {
+    top: -12rem;
+    max-height: 472px;
+  }
+  .categories {
+    padding: 15rem 0 8rem;
+  }
+}
+
+/* Bigger than 1000 */
+@media (min-width: 1000px) {
+  .section {
+    padding: 20rem 0 19rem;
+  }
+  .hero {
+    padding: 22rem 0;
+  }
+  .hero-heading {
+    font-size: 3.0rem;
+  }
+  .phone {
+    top: -16rem;
+    max-height: 615px;
+  }
+  .phone + .phone {
+    top: -14rem;
+    max-height: 570px;
+  }
+}
+
+
+	
+/* steemwp-loader */	
+.steemwp-loader,
+.steemwp-loader:before,
+.steemwp-loader:after {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: steemwploader 1.8s infinite ease-in-out;
+  animation: steemwploader 1.8s infinite ease-in-out;
+}
+.steemwp-loader {
+  color: #33C3F0;
+  font-size: 10px;
+  margin: 80px auto;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.steemwp-loader:before,
+.steemwp-loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+.steemwp-loader:before {
+  left: -3.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.steemwp-loader:after {
+  left: 3.5em;
+}
+@-webkit-keyframes steemwploader {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+@keyframes steemwploader {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+
+	
