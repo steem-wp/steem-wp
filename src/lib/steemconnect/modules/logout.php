@@ -2,18 +2,12 @@
     
     function logout() {
         
-        $query = array (
-            'header' => array (
-                'authorization: ' . STEEMWP_ACCESS_TOKEN,
-                'cache-control: no-cache',
-                'content-type: application/json'
-            ),
-            'method' => 'POST',
-            'url' => SC_REVOKE_URL
+        $params = array (
+            'method' => 'POST'
         );
         
-        include STEEMWP_DIR_PATH . '/src/helpers/curl.php';
-        $response = curl($query);
+        include STEEMWP_DIR_PATH . '/src/helpers/remote.php';
+        $response = remote(SC_REVOKE_URL, $params);
         
         delete_option( STEEMWP_AUTH_GROUP );
         

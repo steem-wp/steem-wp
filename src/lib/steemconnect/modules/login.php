@@ -18,20 +18,14 @@
                 $steemwp_auth['expiry'] = time() + $_GET['expires_in'];
                 $steemwp_auth['scope'] = $_GET['scope'];
                 
-                $query = array (
-                    'header' => array (
-                        'authorization: ' . $_GET['access_token'],
-                        'cache-control: no-cache',
-                        'content-type: application/json'
-                    ),
-                    'method' => 'POST',
-                    'url' => SC_VERIFY_URL
+                $params = array (
+                    'method' => 'POST'
                 );
                 
-                include STEEMWP_DIR_PATH . '/src/helpers/curl.php';
-                $response = curl($query);
-                
-                if(!$response->error) update_option( STEEMWP_AUTH_GROUP, serialize ( $steemwp_auth ) );
+                include STEEMWP_DIR_PATH . '/src/helpers/remote.php';
+                $response = remote(SC_VERIFY_URL, $params);
+
+                if($response && !$response->error) update_option( STEEMWP_AUTH_GROUP, serialize ( $steemwp_auth ) );
                 
                 exit ( wp_redirect( home_url() . '/wp-admin/admin.php?page=steemwp' ) );
                 
