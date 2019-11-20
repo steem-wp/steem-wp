@@ -13,19 +13,29 @@
                 
                 $steemwp_auth = unserialize ( get_option( STEEMWP_AUTH_GROUP ) ) ?? array();
                 
-                $steemwp_auth['account'] = $_GET['username'];
-                $steemwp_auth['token'] = $_GET['access_token'];
-                $steemwp_auth['expiry'] = time() + $_GET['expires_in'];
-                $steemwp_auth['scope'] = $_GET['scope'];
-                
-                $params = array (
-                    'method' => 'POST'
-                );
-                
-                include STEEMWP_DIR_PATH . '/src/helpers/remote.php';
-                $response = remote(SC_VERIFY_URL, $params);
+                include STEEMWP_DIR_PATH . '/src/helpers/validate.php';
 
-                if($response && !$response->error) update_option( STEEMWP_AUTH_GROUP, serialize ( $steemwp_auth ) );
+                $account = validateAccount ( sanitize_text_field ( $_GET['username'] ) );
+                $token = sanitize_text_field ( $_GET['access_token'] );
+                $expiry = time() +  intval ( $_GET['expires_in'] );
+                $scope = sanitize_text_field ( $_GET['scope'] ) || 'posting';
+
+                if ($account && $token && $expiry && $scope) {
+
+                    $steemwp_auth['account'] = $account;
+                    $steemwp_auth['token'] = $token;
+                    $steemwp_auth['expiry'] = $expiry;
+                    $steemwp_auth['scope'] = $scope;
+                    
+                    $params = array (
+                        'method' => 'POST'
+                    );
+                    
+                    include STEEMWP_DIR_PATH . '/src/helpers/remote.php';
+                    $response = remote(SC_VERIFY_URL, $params);
+
+                    if($response && !$response->error) update_option( STEEMWP_AUTH_GROUP, serialize ( $steemwp_auth ) );
+                }
                 
                 exit ( wp_redirect( home_url() . '/wp-admin/admin.php?page=steemwp' ) );
                 

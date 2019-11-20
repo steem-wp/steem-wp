@@ -1,6 +1,10 @@
 <?php
     
     function remote($url, $params) {
+
+        $token = sanitize_text_field ($_GET['access_token'] );
+        if (!$token) return false;
+
         $config = array(
             'method' => $params['method'] ?? "POST",
             'encoding' => $params['encoding'] ?? '',
@@ -10,7 +14,7 @@
             'headers' => $params['header'] ?? array(
                 'Content-Type' => 'application/json',
                 "Cache-Control" => "no-cache",
-                "Authorization" => $_GET['access_token']
+                "Authorization" => $token
             ),
             'body' =>  $params['postfields'] ?? '{}',
             'cookies' =>  $params['cookies'] ?? array()
