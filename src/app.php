@@ -1,6 +1,6 @@
 <?php
     
-    class App {
+    class SteemWP_App {
         
         public function __construct() {
             
@@ -13,6 +13,6 @@
         
     }
 
-    new App();
+    new SteemWP_App();
 
 ?>

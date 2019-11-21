@@ -7,7 +7,7 @@
         );
         
         include STEEMWP_DIR_PATH . '/src/helpers/remote.php';
-        $response = remote(SC_REVOKE_URL, $params);
+        $response = remote(STEEMWP_SC_REVOKE_URL, $params);
         
         delete_option( STEEMWP_AUTH_GROUP );
         

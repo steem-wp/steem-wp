@@ -32,7 +32,7 @@
                     );
                     
                     include STEEMWP_DIR_PATH . '/src/helpers/remote.php';
-                    $response = remote(SC_VERIFY_URL, $params);
+                    $response = remote(STEEMWP_SC_VERIFY_URL, $params);
 
                     if($response && !$response->error) update_option( STEEMWP_AUTH_GROUP, serialize ( $steemwp_auth ) );
                 }

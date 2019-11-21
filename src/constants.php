@@ -103,11 +103,11 @@
         )
     );
     
-    defined('SC_VERIFY_URL') or define('SC_VERIFY_URL', 'https://steemconnect.com/api/me');
-    defined('SC_BROADCAST_URL') or define('SC_BROADCAST_URL', 'https://steemconnect.com/api/broadcast');
-    defined('SC_REVOKE_URL') or define('SC_REVOKE_URL', 'https://steemconnect.com/api/oauth2/token/revoke');
-    defined('SC_SCOPE') or define('SC_SCOPE', array("login", "offline"));
-    defined('SC_LOGIN_URL') or define('SC_LOGIN_URL', 'https://steemwp.com/steemwp/remote-auth-in?scope=vote,comment&state=' . urlencode( home_url() . '/' . STEEMWP_SC_AUTH_URL ));
+    defined('STEEMWP_SC_VERIFY_URL') or define('STEEMWP_SC_VERIFY_URL', 'https://steemconnect.com/api/me');
+    defined('STEEMWP_SC_BROADCAST_URL') or define('STEEMWP_SC_BROADCAST_URL', 'https://steemconnect.com/api/broadcast');
+    defined('STEEMWP_SC_REVOKE_URL') or define('STEEMWP_SC_REVOKE_URL', 'https://steemconnect.com/api/oauth2/token/revoke');
+    defined('STEEMWP_SC_SCOPE') or define('STEEMWP_SC_SCOPE', array("login", "offline"));
+    defined('STEEMWP_SC_LOGIN_URL') or define('STEEMWP_SC_LOGIN_URL', 'https://steemwp.com/steemwp/remote-auth-in?scope=vote,comment&state=' . urlencode( home_url() . '/' . STEEMWP_SC_AUTH_URL ));
     
     defined('STEEMWP_FILE_URL') or define('STEEMWP_FILE_URL', plugins_url('steemwp/index.php'));
     defined('STEEMWP_DIR_URL') or define('STEEMWP_DIR_URL', plugins_url('steemwp') );
