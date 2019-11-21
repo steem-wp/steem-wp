@@ -17,7 +17,7 @@
         </p>
         
         <div style="margin-top: 1rem">
-            <a href="<?php echo SC_LOGIN_URL ?>" class="steemwp-button"> Secure connect</a>
+            <a href="<?php echo STEEMWP_SC_LOGIN_URL ?>" class="steemwp-button"> Secure connect</a>
         </div>
         
         <div style="margin-top: 5rem">
