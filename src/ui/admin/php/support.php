@@ -48,7 +48,7 @@
                 <br/>
                 
                 <div style="margin-top: 1rem">
-                    <a href="https://github.com/steem-wp/steemwp/issues/new" target="_blank" class="steemwp-button">File</a>
+                    <a href="https://github.com/steem-wp/steem-wp/issues/new" target="_blank" class="steemwp-button">File</a>
                 </div>
                 
             </div>

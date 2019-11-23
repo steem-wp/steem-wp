@@ -2,9 +2,9 @@
 
     include plugin_dir_path(__FILE__) . 'partials/head.php';
     
-    wp_enqueue_script( 'vue', plugins_url('steemwp/vendor/vue/vue.js'), false );
-    wp_enqueue_script( 'steemwp-dsteem-js', plugins_url('steemwp/vendor/dsteem/dsteem.js'), false );
-    wp_enqueue_script( 'steemwp-dashboard-js', plugins_url('steemwp/src/ui/admin/vue/about.js'), false, time() );
+    wp_enqueue_script( 'vue', plugins_url('steem-wp/vendor/vue/vue.js'), false );
+    wp_enqueue_script( 'steemwp-dsteem-js', plugins_url('steem-wp/vendor/dsteem/dsteem.js'), false );
+    wp_enqueue_script( 'steemwp-dashboard-js', plugins_url('steem-wp/src/ui/admin/vue/about.js'), false, STEEMWP_VERSION );
 
 ?>
 

@@ -7,7 +7,7 @@
     
     $steemwp_options = unserialize( get_option( STEEMWP_AUTH_GROUP ) );
     
-    defined('STEEMWP_SC_AUTH_URL') or define('STEEMWP_SC_AUTH_URL', 'steemwp/auth');
+    defined('STEEMWP_SC_AUTH_URL') or define('STEEMWP_SC_AUTH_URL', 'steem-wp/auth');
     
     defined('STEEMWP_ACTIVE_ACCOUNT') or define('STEEMWP_ACTIVE_ACCOUNT', $steemwp_options['account']);
     defined('STEEMWP_ACCESS_TOKEN') or define('STEEMWP_ACCESS_TOKEN', $steemwp_options['token']);
@@ -19,8 +19,8 @@
     
     defined('STEEMWP_HOMEPAGE') or define('STEEMWP_HOMEPAGE', 'http://steemwp.com');
     defined('STEEMWP_STEEM_ACCOUNT') or define('STEEMWP_STEEM_ACCOUNT', 'steemwp.com');
-    defined('STEEMWP_VERSION') or define('STEEMWP_VERSION', '0.0.1');
-    defined('STEEMWP_LOGO_URL') or define('STEEMWP_LOGO_URL', plugins_url('steemwp/assets/img/steem.png'));
+    defined('STEEMWP_LOGO_URL') or define('STEEMWP_LOGO_URL', plugins_url('steem-wp/assets/img/steem.png'));
+    
     defined('STEEMWP_LOGO_DATA') or define('STEEMWP_LOGO_DATA', 'data:image/svg+xml;base64,' . base64_encode(
         '<?xml version="1.0" standalone="no"?>
         <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
@@ -109,17 +109,17 @@
     defined('STEEMWP_SC_SCOPE') or define('STEEMWP_SC_SCOPE', array("login", "offline"));
     defined('STEEMWP_SC_LOGIN_URL') or define('STEEMWP_SC_LOGIN_URL', 'https://steemwp.com/steemwp/remote-auth-in?scope=vote,comment&state=' . urlencode( home_url() . '/' . STEEMWP_SC_AUTH_URL ));
     
-    defined('STEEMWP_FILE_URL') or define('STEEMWP_FILE_URL', plugins_url('steemwp/index.php'));
+    defined('STEEMWP_FILE_URL') or define('STEEMWP_FILE_URL', plugins_url('steem-wp/index.php'));
     defined('STEEMWP_DIR_URL') or define('STEEMWP_DIR_URL', plugins_url('steemwp') );
     
-    defined('STEEMWP_HOOKS_FOLDER') or define('STEEMWP_HOOKS_FOLDER', plugins_url('steemwp/src/hooks') );
-    defined('STEEMWP_UI_FOLDER') or define('STEEMWP_UI_FOLDER', plugins_url('steemwp/src/ui') );
-    defined('STEEMWP_MODULES_FOLDER') or define('STEEMWP_MODULES_FOLDER', plugins_url('steemwp/src/modules') );
-    defined('STEEMWP_LIB_FOLDER') or define('STEEMWP_LIB_FOLDER', plugins_url('steemwp/src/lib') );
-    defined('STEEMWP_HELPERS_FOLDER') or define('STEEMWP_HELPERS_FOLDER', plugins_url('steemwp/src/helpers') );
+    defined('STEEMWP_HOOKS_FOLDER') or define('STEEMWP_HOOKS_FOLDER', plugins_url('steem-wp/src/hooks') );
+    defined('STEEMWP_UI_FOLDER') or define('STEEMWP_UI_FOLDER', plugins_url('steem-wp/src/ui') );
+    defined('STEEMWP_MODULES_FOLDER') or define('STEEMWP_MODULES_FOLDER', plugins_url('steem-wp/src/modules') );
+    defined('STEEMWP_LIB_FOLDER') or define('STEEMWP_LIB_FOLDER', plugins_url('steem-wp/src/lib') );
+    defined('STEEMWP_HELPERS_FOLDER') or define('STEEMWP_HELPERS_FOLDER', plugins_url('steem-wp/src/helpers') );
     
-    defined('STEEMWP_ASSETS_FOLDER') or define('STEEMWP_ASSETS_FOLDER', plugins_url('steemwp/assets') );
-    defined('STEEMWP_VENDOR_FOLDER') or define('STEEMWP_VENDOR_FOLDER', plugins_url('steemwp/vendor') );
-    defined('STEEMWP_SRC_FOLDER') or define('STEEMWP_SRC_FOLDER', plugins_url('steemwp/src') );   
+    defined('STEEMWP_ASSETS_FOLDER') or define('STEEMWP_ASSETS_FOLDER', plugins_url('steem-wp/assets') );
+    defined('STEEMWP_VENDOR_FOLDER') or define('STEEMWP_VENDOR_FOLDER', plugins_url('steem-wp/vendor') );
+    defined('STEEMWP_SRC_FOLDER') or define('STEEMWP_SRC_FOLDER', plugins_url('steem-wp/src') );   
     
 ?>

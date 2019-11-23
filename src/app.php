@@ -8,6 +8,7 @@
             require_once('modules/index.php');
             require_once('lib/index.php');
             require_once('hooks/index.php');
+            require_once('ui/init.php');
         
         }
         

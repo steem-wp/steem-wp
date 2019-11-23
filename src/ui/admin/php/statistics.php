@@ -2,11 +2,11 @@
     
     include plugin_dir_path(__FILE__) . 'partials/head.php';
     
-    wp_enqueue_script( 'vue', plugins_url('steemwp/vendor/vue/vue.js'), false );
-    wp_enqueue_script( 'dsteem', plugins_url('steemwp/vendor/dsteem/dsteem.js'), false );
-    wp_enqueue_script( 'apexcharts', plugins_url('steemwp/vendor/apexcharts/apexcharts.min.js'), false );
-    wp_enqueue_script( 'apexcharts-vue', plugins_url('steemwp/vendor/apexcharts/vue-apexcharts.js'), false );
-    wp_enqueue_script( 'steemwp-dashboard-js', plugins_url('steemwp/src/ui/admin/vue/statistics.js'), false, time() );
+    wp_enqueue_script( 'vue', plugins_url('steem-wp/vendor/vue/vue.js'), false );
+    wp_enqueue_script( 'dsteem', plugins_url('steem-wp/vendor/dsteem/dsteem.js'), false );
+    wp_enqueue_script( 'apexcharts', plugins_url('steem-wp/vendor/apexcharts/apexcharts.min.js'), false );
+    wp_enqueue_script( 'apexcharts-vue', plugins_url('steem-wp/vendor/apexcharts/vue-apexcharts.js'), false );
+    wp_enqueue_script( 'steemwp-dashboard-js', plugins_url('steem-wp/src/ui/admin/vue/statistics.js'), false, STEEMWP_VERSION );
     
 ?>
 <div class="steemwp-container">

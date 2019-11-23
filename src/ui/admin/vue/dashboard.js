@@ -227,17 +227,17 @@ var app = new Vue({
       let totalGlobalVests = +globals.total_vesting_shares.split(' ')[0]
       let userVests = +account.vesting_shares.split(' ')[0]
       let otherVests = +account.received_vesting_shares.split(' ')[0] - +account.delegated_vesting_shares.split(' ')[0]
-      let steemPower = Number((totalGlobalSteem * (userVests / totalGlobalVests)).toFixed(2)).toLocaleString()
-      let delegatedSteemPower = Number((totalGlobalSteem * (otherVests / totalGlobalVests)).toFixed()).toLocaleString()
+      let steemPower = Number((totalGlobalSteem * (userVests / totalGlobalVests)).toFixed(2))
+      let delegatedSteemPower = Number((totalGlobalSteem * (otherVests / totalGlobalVests)).toFixed())
       // console.log(steemPower, delegatedSteemPower)
-      
+
       this.accountData.currentMana = +currentMana
       this.accountData.maxMana = +maxMana
       this.accountData.currentManaPerc = +currentManaPerc
       this.accountData.votingPower = +votingPower
       this.accountData.voteWorth = +voteWorth
       this.accountData.steemPower = +steemPower
-      this.accountData.delegatedSteemPower = +delegatedSteemPower
+      this.accountData.delegatedSteemPower = delegatedSteemPower
       
     },
     setCharts () {
@@ -349,7 +349,7 @@ var app = new Vue({
                 
                     <div class="steemwp-card fluid">
                         <div class="header">
-                            {{this.formatNumber(this.accountData.steemPower)}}
+                            {{this.formatNumber(this.accountData.steemPower.toLocaleString())}}
                         </div>
                         <div class="footer">
                             Steem Power
@@ -358,7 +358,7 @@ var app = new Vue({
             
                     <div class="steemwp-card fluid">
                         <div class="header">
-                            {{this.formatNumber(this.accountData.delegatedSteemPower)}}
+                            {{this.formatNumber(this.accountData.delegatedSteemPower.toLocaleString())}}
                         </div>
                         <div class="footer">
                             Delegated Steem Power
