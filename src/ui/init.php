@@ -1,9 +1,13 @@
 <?php
 
-  function steemwp_load_plugin_css() {
+  function steemwp_load_plugin_css($hook) {
+
+    if (strpos($hook, 'steemwp') !== false) {
 
       wp_enqueue_style('steemwp-skeleton', plugins_url('steem-wp/assets/css/skeleton.css'), false, STEEMWP_VERSION);
       wp_enqueue_style('steemwp-custom', plugins_url('steem-wp/assets/css/custom.css'), false, STEEMWP_VERSION);
+    
+    }
 
   }
 
