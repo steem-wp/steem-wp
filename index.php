@@ -3,7 +3,7 @@
  * Plugin Name:       Steem WP
  * Plugin URI:        https://github.com/steem-wp/steem-wp
  * Description:       Complete Steem solutions for Wordpress!
- * Version:           0.0.3
+ * Version:           0.0.4
  * Author:            Steem WP
  * Author URI:        https://steemwp.com
  * Text Domain:       steemwp
@@ -16,7 +16,7 @@
     
     define( 'STEEMWP_DIR_PATH', plugin_dir_path( __FILE__ ) );
     define('STEEMWP_FILE', __FILE__);
-    defined('STEEMWP_VERSION') or define('STEEMWP_VERSION', '0.0.3');
+    defined('STEEMWP_VERSION') or define('STEEMWP_VERSION', '0.0.4');
     
     //main class
     if ( ! class_exists( 'SteemWP' ) ) {
